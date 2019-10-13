@@ -7,7 +7,7 @@
   $errors = array();
 
   //connect to the database
-  $db = mysqli_connect('localhost', 'erikhenn_medeea', 'Medeea1998@$', 'erikhenn_medeea');
+  $db = mysqli_connect($_ENV['host'], $_ENV['user'], $_ENV['pass'], $_ENV['db']);
 
 //if the register button is clicked
 if (isset($_POST['register'])) {
