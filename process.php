@@ -12,8 +12,8 @@
   echo $username . "<br>";
   echo $password . "<br>";
   // connect to the server and select database
-  if (mysql_connect("localhost", "erikhenn_medeea", "Medeea1998@$") ) {
-    mysql_select_db("erikhenn_medeea");
+  if (mysql_connect($_ENV['host'], $_ENV['user'], $_ENV['pass']) ) {
+    mysql_select_db($_ENV['db']);
     echo "Connection succesfull <br>";
   }
   else {
